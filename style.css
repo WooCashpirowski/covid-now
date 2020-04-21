@@ -97,7 +97,8 @@ h3 {
   .country-wrapper {
     width: 350px;
   }
- 
+}
+
 @media (max-width: 320px) {
   .list-wrapper,
   .country-wrapper {
@@ -106,5 +107,4 @@ h3 {
   .date {
     display: block;
   }
-  
 }
