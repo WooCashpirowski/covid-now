@@ -42,13 +42,6 @@ body {
   z-index: 0;
 }
 
-.wrapper > h1 {
-  position: absolute;
-  width: 100%;
-  top: 1rem;
-  left: 0;
-}
-
 .list-wrapper {
   background: rgba(104, 71, 86, 0.6);
   border-radius: 5px;
@@ -75,6 +68,10 @@ body {
   border-radius: 5px;
   width: 500px;
   align-self: center;
+}
+
+.date {
+  font-size: 1.5rem;
 }
 
 .list-wrapper,
@@ -105,6 +102,9 @@ h3 {
   .list-wrapper,
   .country-wrapper {
     width: 320px;
+  }
+  .date {
+    display: block;
   }
   
 }
