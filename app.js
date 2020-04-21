@@ -45,9 +45,9 @@ function getData() {
         const year = date.getUTCFullYear();
         countryEl.innerHTML = item[0];
         dateEl.innerHTML = `
-        ${day < 10 ? "0" + day : day}.${
+        ${parseInt(day < 10 ? "0" + day : day)}.${parseInt(
           month < 10 ? "0" + month : month
-        }.${year}
+        )}.${parseInt(year)}
         `;
         newInfectionsEl.innerHTML = latestData.confirmed - dayBefore.confirmed;
         infectionsEl.innerHTML = latestData.confirmed;
