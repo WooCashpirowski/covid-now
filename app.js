@@ -44,11 +44,14 @@ function getData() {
         let month = date.getUTCMonth() + 1;
         const year = date.getUTCFullYear();
         countryEl.innerHTML = item[0];
-        dateEl.innerHTML = `
-        ${parseInt(day < 10 ? "0" + day : day)}.${parseInt(
+        const dateDisp = `
+        ${day < 10 ? "0" + day : day}.${
           month < 10 ? "0" + month : month
-        )}.${parseInt(year)}
+        }.${year}
         `;
+        dateEl.innerHTML = dateDisp.toString();
+        console.log(dateDisp.toString());
+
         newInfectionsEl.innerHTML = latestData.confirmed - dayBefore.confirmed;
         infectionsEl.innerHTML = latestData.confirmed;
         deathsEl.innerHTML = latestData.deaths;
