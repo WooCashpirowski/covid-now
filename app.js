@@ -49,7 +49,7 @@ function getData() {
           month < 10 ? "0" + month.toString() : month.toString()
         }.${year}
         `;
-        dateEl.innerHTML = dateDisp;
+        dateEl.innerText = dateDisp;
 
         newInfectionsEl.innerHTML = latestData.confirmed - dayBefore.confirmed;
         infectionsEl.innerHTML = latestData.confirmed;
