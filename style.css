@@ -42,30 +42,39 @@ body {
   z-index: 0;
 }
 
+.wrapper > h1 {
+  position: absolute;
+  width: 100%;
+  top: 1rem;
+  left: 0;
+}
+
 .list-wrapper {
-  background: #684756;
+  background: rgba(104, 71, 86, 0.6);
   border-radius: 5px;
-  width: 375px;
-  padding: 1rem 0.6rem;
+  width: 500px;
   align-self: center;
 }
 
 .list-wrapper select {
-  background: #684756;
+  background: rgba(104, 71, 86, 0.6);
   border: none;
   color: whitesmoke;
   font-size: 14px;
   font-weight: bold;
   height: 100%;
-  width: 360px;
+  width: 100%;
   cursor: pointer;
+  padding: 1rem 0;
 }
 
 .country-wrapper {
   padding: 2rem 0.5rem;
   background-color: rgba(104, 71, 86, 0.6);
   margin-top: 1rem;
-  border-radius: 20px;
+  border-radius: 5px;
+  width: 500px;
+  align-self: center;
 }
 
 .list-wrapper,
@@ -86,20 +95,16 @@ h3 {
 .card h3 span {
   font-size: 1.5rem;
 }
-@media (max-width: 360px) {
-  .list-wrapper {
-    width: 360px;
-  }
-  .list-wrapper select {
+@media (max-width: 500px) {
+  .list-wrapper,
+  .country-wrapper {
     width: 350px;
   }
-}
+ 
 @media (max-width: 320px) {
-  .list-wrapper {
+  .list-wrapper,
+  .country-wrapper {
     width: 320px;
   }
-  .list-wrapper select {
-    font-size: 12px;
-    width: 310px;
-  }
+  
 }
