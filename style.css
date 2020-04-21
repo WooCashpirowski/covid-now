@@ -18,22 +18,38 @@ body {
 }
 
 .wrapper {
-  padding: 3rem;
-  max-width: 350px;
+  padding: 3rem 2rem 4.5rem;
+  width: 100%;
   height: 100%;
-  margin: 1rem;
-  border-radius: 20px;
-  background: #7a5465;
-  box-shadow: inset -20px 20px 60px #684756, inset 20px -20px 60px #8c6174;
+  /* margin: 1rem; */
+  /* border-radius: 20px; */
+  background: url("/monalisa-4893660_1920.jpg");
+  background-position: top;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   color: whitesmoke;
+  position: relative;
+}
+.background {
+  position: absolute;
+  background: #7a5465;
+  box-shadow: inset -20px 20px 60px #684756, inset 20px -20px 60px #8c6174;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .list-wrapper {
   background: #684756;
   border-radius: 5px;
+  width: 375px;
+  padding: 1rem 0.6rem;
+  align-self: center;
 }
 
 .list-wrapper select {
@@ -43,14 +59,23 @@ body {
   font-size: 14px;
   font-weight: bold;
   height: 100%;
+  width: 360px;
+  cursor: pointer;
+}
+
+.country-wrapper {
+  padding: 2rem 0.5rem;
+  background-color: rgba(104, 71, 86, 0.6);
+  margin-top: 1rem;
+  border-radius: 20px;
 }
 
 .list-wrapper,
 .country-wrapper {
-  padding: 0.5rem;
+  z-index: 1;
 }
 
-.card h1,
+.country .card h1,
 h2,
 h3 {
   padding: 0.5rem;
@@ -62,4 +87,21 @@ h3 {
 
 .card h3 span {
   font-size: 1.5rem;
+}
+@media (max-width: 360px) {
+  .list-wrapper {
+    width: 360px;
+  }
+  .list-wrapper select {
+    width: 350px;
+  }
+}
+@media (max-width: 320px) {
+  .list-wrapper {
+    width: 320px;
+  }
+  .list-wrapper select {
+    font-size: 12px;
+    width: 310px;
+  }
 }
