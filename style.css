@@ -21,9 +21,7 @@ body {
   padding: 3rem 2rem 4.5rem;
   width: 100%;
   height: 100%;
-  /* margin: 1rem; */
-  /* border-radius: 20px; */
-  background: url("/monalisa-4893660_1920.jpg");
+  background: url("monalisa-4893660_1920.jpg");
   background-position: top;
   background-size: cover;
   display: flex;
