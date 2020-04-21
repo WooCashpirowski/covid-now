@@ -39,18 +39,19 @@ function getData() {
       if (country === item[0]) {
         const latestData = item[1][item[1].length - 1];
         const dayBefore = item[1][item[1].length - 2];
-        const date = new Date(latestData.date);
-        let day = date.getDate();
-        let month = date.getUTCMonth() + 1;
-        const year = date.getUTCFullYear();
-        countryEl.innerHTML = item[0];
-        const dateDisp = `
-        ${day < 10 ? "0" + day.toString() : day.toString()}.${
-          month < 10 ? "0" + month.toString() : month.toString()
-        }.${year}
-        `;
-        dateEl.innerText = dateDisp;
 
+        // const date = new Date(latestData.date);
+        // let day = date.getDate();
+        // let month = date.getUTCMonth() + 1;
+        // const year = date.getUTCFullYear();
+        // const dateDisp = `
+        // ${day < 10 ? "0" + day : day}.${
+        //   month < 10 ? "0" + month : month
+        // }.${year}
+        // `;
+        dateEl.innerText = latestData.date;
+
+        countryEl.innerHTML = item[0];
         newInfectionsEl.innerHTML = latestData.confirmed - dayBefore.confirmed;
         infectionsEl.innerHTML = latestData.confirmed;
         deathsEl.innerHTML = latestData.deaths;
